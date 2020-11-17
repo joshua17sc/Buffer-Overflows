@@ -37,15 +37,18 @@ Your Windows VM will have Immunity Debugger and a vulnerable application.
 
 Right click on Immunity Debugger and "open as Administrator"
 
-Then, click File-> Open -> <vulnerable application>
+Then, click File-> Open -> "<vulnerable application>"
 
 
 
 To Learn More
 =============
 
-https://inst.eecs.berkeley.edu/~cs161/fa08/papers/stack_smashing.pdf - Why are we doing all of this? A very straightforward breakdown of memory, registers, assembly, C, and it's **FREE**!!!!!!
+*https://inst.eecs.berkeley.edu/~cs161/fa08/papers/stack_smashing.pdf 
+- Why are we doing all of this? A very straightforward breakdown of memory, registers, assembly, C, and it's **FREE**!!!!!!
 
-https://en.wikipedia.org/wiki/Buffer_overflow - Actually quite informative
+*https://en.wikipedia.org/wiki/Buffer_overflow 
+- Actually quite informative
 
-https://www.amazon.com/Hacking-Art-Exploitation-Jon-Erickson/dp/1593271441 - to understand memory, registers, assembly, C, and how it all works
+*https://www.amazon.com/Hacking-Art-Exploitation-Jon-Erickson/dp/1593271441 
+- Again, to understand memory, registers, assembly, C, and how it all works
