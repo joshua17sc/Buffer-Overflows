@@ -20,14 +20,3 @@ try:
 	
 except:
 	print("failed to connect")
-		
-# !mona config -set workingfolder c:\mona\%p
-#43386E43 -> 630
-# !mona bytearray -b "\x00\x04\xa0\xad\xbe\xde\xef"
-#badchars 00 23 3c 83 ba
-# !mona compare -f C:\mona\oscp\bytearray.bin -a 0196FA30
-# !mona bytearray -b "\x00\x04\x3e\xe1"
-#ESP 01A4FA30
-
-# 625011AF
-# \xAF\x11\x50\x62"
