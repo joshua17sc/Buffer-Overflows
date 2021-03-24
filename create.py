@@ -3,10 +3,10 @@
 from __future__ import print_function
 
 #tart with 00 and add any others you find
-bad = "00 07 2e a0".split()
+bad = "00".split()
 
 #turns them into a nice string to copy into python
-print("badchars = ", end='')
+print("badchars = ")
 for x in range(1, 256):
 	if "{:02x}".format(x) not in bad: 
 		print("\\x" + "{:02x}".format(x), end='')
